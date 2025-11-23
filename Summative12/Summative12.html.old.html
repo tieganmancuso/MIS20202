@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--
+        PgP 5/28/2025 update to html and javascript to coincide with best coding practices
+        Formative00 split into 3 separate html files instead of using tabs, too unwieldly
+		PgP 7/17/2020  Final version, with all updates for fall 2020
+		-->
+
+    <!-- With this version going to put the firstname, lastname... on the first page.
+		This will allow student to see assignment with blank fields.  Then when they get to Part 2 and do Exercise 1, put in
+		-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS202 Summative12</title>
+
+</head>
+
+
+<body>
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+		<h1 class=" text-center">Special File Formats Communication</h1>
+
+<h2 id="student-info" class="sr-only">Student Information</h2>
+<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+<div class="row" aria-labelledby="student-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="FirstName" class="text-dark">First Name:</label>
+            <input class="form-control"
+                   name="FirstName"
+                   id="FirstName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="given-name"
+                   aria-label="First Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="LastName" class="text-dark">Last Name:</label>
+            <input class="form-control"
+                   name="LastName"
+                   id="LastName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="family-name"
+                   aria-label="Last Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="StarID" class="text-dark">StarID:</label>
+            <input class="form-control"
+                   name="StarID"
+                   id="StarID"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="username"
+                   aria-label="StarID"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="email" class="text-dark">Email:</label>
+            <input class="form-control"
+                   name="email"
+                   id="email"
+                   type="email"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="email"
+                   aria-label="Email"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+<input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+<h2 id="course-info" class="sr-only">Course Information</h2>
+<div class="row" aria-labelledby="course-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Semester" class="text-dark">Semester:</label>
+            <input class="form-control"
+                   name="Semester"
+                   id="Semester"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Semester"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Class" class="text-dark">Class:</label>
+            <input class="form-control"
+                   name="Class"
+                   id="Class"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Class"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Section" class="text-dark">Section:</label>
+            <input class="form-control"
+                   name="Section"
+                   id="Section"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Section"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="assignment" class="text-dark">Assignment:</label>
+            <input class="form-control"
+                   name="assignment"
+                   id="assignment"
+                   type="text"
+                   readonly
+                   value="Summative12"
+                   aria-readonly="true"
+                   aria-label="Assignment"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>	
+		<!-- -end-Student, class and assignment information-end -->
+
+		<div class="col-lg-12">
+			<br />
+			<input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"/>
+			<br />
+		</div>
+
+		<div class="col-lg-12 h3 text-danger">
+			850 Points
+            <hr />
+		</div>
+
+		<!-- -start-objectives-start -->
+		<div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+		<div id="Objectives" class=" collapse in col-lg-12">
+
+			<!--Above this line similar except for Assignment number and title   -->
+
+			<p>After completing this assignment you will be able to use a computer to</p>
+			<ul>
+				<li>mount and read an .iso image file</li>
+				<li>create a .zip file</li>
+				<li>open a .zip file</li>
+				<li>investigate the structure of office 'x' files</li>
+				<li>investigate compression algorithms</li>
+			</ul>
+
+			<p class="hilite">The exercises in this assignment are best done in the order presented.</p>
+
+		</div>
+
+		<!-- -end-objectives-end -->
+
+		<div class="col-lg-12"><a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a></div>
+
+		<div id="Overview" class="collapse in  col-lg-12">
+
+
+
+			<p>The purpose of this assignment is to learn the value of several special file formats that can be useful in getting things done.Some  considerations  are:</p>
+			<ul>
+				<li>Combining several files into one to facilitate delivery by email, or during web conferencing and other collaborative endeavors</li>
+				<li>Work with .iso files to expedite distribution, simplify versioning and improve performance</li>
+				<li>Understand the file structure of .docx, .xlsx and pptx files</li>
+				<li>State the differences between the different styles of compression</li>
+				<li>Understand the importance of compression, and what sound frequency means.to different people (<a href="SpecialFileFormats/Mosquito_17point4_kHz_sound.mp3" class="bg-info text-white" target="_blank">Mosquito</a>?).</li>
+			</ul>
+			<p>This assignment will cover two file formats-.iso and .zip. You are encouraged to explore on your own to find additional features and other file formats that will make your life and present or future jobs easier.</p>
+			<hr />
+			<p>
+				Note: There are many ways to complete the following exercises.<br />
+				One of the primary factors will be the type of computer and operating system that you are using.<br />
+				You can use VMware Workstation (PC) or Fusion (Mac),  Ultimate CD,  Virtual Clone Drive and QuickZip to complete the exercises in this assignment.
+			</p>
+			<p>The .iso/ISO image files are  located in the class storage 'ReadOnly' folder.</p>
+			<hr />
+
+		</div>
+
+		<div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-ISO Image Files</a></div>
+
+		<div id="Exercise01" class="collapse in  col-lg-12">
+
+			<p>
+				Background:<br />
+				<a href="https://en.wikipedia.org/wiki/ISO_image" class="bg-info text-white" target="_blank">ISO files at wikipedia</a><br />
+				<a href="https://www.linkedin.com/learning/comptia-network-plus-n10-007-cert-prep-7-wireless-virtual-cloud-and-mobile-networking/your-first-virtual-machine" class="bg-info text-white" target="_blank">Using.iso files for virtual machines</a> Hint: search the transcript for &#39;iso file&#39;
+			</p>
+			<p>
+				<strong>(50)</strong>   1.   What is the value to a business of knowing how to make use of .iso image file(s)?<br />
+				Provide a brief explanation below:<br />
+
+			<!-- Enter your brief answer in the VALUE field below   GROK -->
+				<input type="text" name="q1" id="q1" size="120" maxlength="120" class="form-control" value="purpose of .iso file:  " />
+			</p>
+			<hr />
+		</div>
+
+
+		<div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Mounting ISO Files</a></div>
+
+		<div id="Exercise02" class="collapse in  col-lg-12">
+
+			<p>
+				Windows 10 or newer, using File Explorer; or Mac, using Finder,&nbsp; download and then double click the .iso file listed below to mount it and examine its contents.<br />
+				<br />
+				Use the ISO image file, <a href="SpecialFileFormats/Q2_IsoImage.iso"   class="bg-info text-white" target="_blank">Q2_IsoImage.iso</a> for this question.<br />
+				<br />
+				Using File Explorer(Windows 10), or Finder(Mac),  open the file &quot;<code>PRC_EST2005_AGESEX_RES.csv</code>&quot; which is found on that Q2_IsoImage.iso file
+                <br />
+				<br />
+
+				<strong>(50)</strong>  2.  Copy and paste the text from the last record of that file into the form field below (do not worry how it looks when you paste it)<br />
+
+			<!-- Enter your brief answer in the VALUE field below   GROK -->
+				<input type="text" name="q2" id="q2" size="120" maxlength="120" class="form-control" value="last record contents:  " />
+			</p>
+			<p>
+				<strong>(50)</strong>  3.  Why did Microsoft and Apple incorporate the ability to mount an .iso image file into their operating systems?<br />
+				Provide a brief explanation below:<br />
+
+			<!-- Enter your brief answer in the VALUE field below   GROK -->
+				<input type="text" name="q3" id="q3" size="120" maxlength="120" class="form-control" value="why .iso?:  " />
+			</p>
+			<hr />
+		</div>
+
+		<div class="col-lg-12"><a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3-Zip Files</a></div>
+
+		<div id="Exercise03" class="collapse in  col-lg-12">
+
+			<p>Ref: Wikipedia <a href="http://en.wikipedia.org/wiki/ZIP_(file_format)"  class="bg-info text-white" target="_blank">ZipFiles</a></p>
+
+			<p>When you need to quickly and conveniently send multiple files to someone electronically, a .zip file is usually the answer.</p>
+
+			<p>
+				Use Windows File Explorer or Finder(Mac) to create a zip file using the files in the folder '<a href="SpecialFileFormats/Q3_ZipStuff/" class="bg-info text-white" target="_blank">ZipStuff</a>' (Copies are available in the class storage 'ReadOnly' folder.)
+				</p>
+
+				<p>
+					For Mac/Finder,&nbsp; select all three files, then right click and choose &#39;Compress ...items&#39;.
+					</p>
+					
+					<p>
+						For Windows, select all three files, then right click and choose &#39;Send to &gt;Compressed(zipped) folder&#39;
+						</p>
+						
+						<p>
+							After creating the zip/archive file, double click it to show the contents.</p>
+
+
+							Make a screenshot of File Explorer/Finder showing the Compressed Folder contents.<br />
+
+							<!--  PgP 2/4/2018 create path using constants and current document assignment -->
+							<strong>(50)</strong> 4. Save the screenshot  as &quot;Ex3&quot; in your ' 
+                <code><span id="Path1"></span></code>
+							' folder.<br />
+
+							<br />
+
+		</div>
+
+
+		<div class="col-lg-12 text-danger">
+			<h2>Screenshot Ex3</h2>
+			<hr />
+		</div>
+
+
+
+		<div class="col-lg-12"><a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4-.docx as a .zip file</a></div>
+
+
+		<div id="Exercise04" class="collapse in  col-lg-12">
+
+			<p>
+				<strong>(50)</strong>   5. Examine the contents of the QuickZip window. What is a Word  .docx 'document' or 'file' composed of?<br />
+
+			<!-- Enter your brief answer in the VALUE field below   GROK -->
+				<input type="text" name="q5" id="q5" size="120" maxlength="120" class="form-control" value=".docx file contents:  " />
+			</p>
+
+			<p>Some Some zip files hide in plain sight. Microsoft is using this file compression technology to reduce file size.</p>
+			<p>
+				Verify that the file '<a href="SpecialFileFormats/Q5_WordFileFormat.docx"  class="bg-info text-white" target="_blank">Q5_WordFileFormat.docx</a>' is a Word .docx file by opening and viewing it in Microsoft Word.<br />
+				Then make a copy of this file, and name it 'WordFileFormat.zip' This will ensure that QuickZip recognizes it as a valid zip file.
+                <br />
+				Using File Explorer open this Word  'document' and paste a screenshot below:
+			</p>
+
+			<p>
+				On a Mac, make a screenshot of the resulting file in Finder.
+			</p>
+
+
+			<p>
+				<strong>(50)</strong> 6. Make a screenshot of the word document zip file showing its components.<br>
+				<!--  PgP 2/4/2018 create path using constants and current document assignment -->
+				Save the screenshot  as &quot;Ex4&quot; in your ' 
+                <code><span id="Path2"></span></code>
+				' folder.<br />
+
+			</p>
+
+
+		</div>
+
+		<div class="col-lg-12 text-danger">
+			<h2>Screenshot Ex4</h2>
+			<hr />
+		</div>
+
+
+
+
+		<div class="col-lg-12"><a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5-File Compression</a></div>
+
+		<div id="Exercise05" class="collapse in  col-lg-12">
+			<p>Compression is a way to make more efficient use of computer resources. </p>
+			<p>
+				Review these two videos from the LinkedIn Learning course- <a href="https://www.linkedin.com/learning/computer-science-principles-digital-information" class="bg-info text-white" target="_blank">Computer Science Principles:Digital Information</a>.
+                <br />
+				The first video discusses <a href="https://www.linkedin.com/learning/computer-science-principles-digital-information/text-compression" class="bg-info text-white" target="_blank">text compression</a>.<br />
+				The second video discusses <a href="https://www.linkedin.com/learning/computer-science-principles-digital-information/image-compression-and-file-formats" class="bg-info text-white" target="_blank">image compression</a>.
+                <br />
+				Reflect on the benefits and limitations of compression.  Then answer the following questions.
+			
+
+			<p>
+				Assume that you are responsible for procuring and maintaining network resources for an organization with an active network that sends a lot of data (text, numeric analysis, images, video).<br />
+				<p>
+					<strong>(100)</strong> 7. Make a  brief argument for compressing those files when they traverse your network and external networks.&nbsp; Address both the costs and benefits.
+
+              <!-- Enter your answer in the VALUE field below   GROK -->
+					<input name="q7" id="q7" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text"/>
+				</p>
+
+
+			<p>
+				Assume that you are an employee of a bank.  Currently they do not compress data files when they send them over the network, or when they store them.  Someone suggests that as a way to save space on the network-attached storage system (<a href="https://en.wikipedia.org/wiki/Network-attached_storage">NAS</a>-essentially a series of hard drives) that file compression be used for all Excel files.  You are asked to research this idea and provide a brief opinion. After reviewing the LinkedIn Learning videos, please address the following situation. There is one proposal that to maximize compression and thereby minimize the required Excel file storage space, that a program based on JPEG compression should be used.&nbsp; Another proposal has been made that to store those Excel files a program based on the LZW compression algorithm should be used.<br />
+				<p>
+					<strong>(100)</strong> 8. Briefly state which program should be used, the one based on JPEG compression or the one based and LZW compression, with a supporting reason.
+
+              <!-- Enter your answer in the VALUE field below   GROK -->
+					<input name="q8" id="q8" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text"/>
+				</p>
+
+
+
+			<p>
+				Practical uses of compression-music and audio.<br />
+
+				Research Audacity and <a href="https://manual.audacityteam.org/man/digital_audio.html" class="bg-info text-white" target="_blank">Digital Audio Fundamentals</a><br />
+				Scroll down to the section on "Compressed Audio"
+                <br />
+				<strong>(100)</strong> 9. Briefly summarize how mp3 compression acheives a 10x reduction in file size.
+
+              <!-- Enter your answer in the VALUE field below   GROK -->
+				<input name="q9" id="q9" size="120" maxlength="120" class="form-control" value="Enter your brief answer here" type="text"/>
+			</p>
+
+
+			<hr />
+
+		</div>
+
+
+		<!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+
+		<div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+		<div id="ExercisePDF" class="collapse in  col-lg-12">
+			<p>
+				Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+				Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+				From the menu choose File&gt;Print... and using &quot;Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                <code><span id="Path3"></span></code>
+				' folder.<br />
+			</p>
+			<br />
+
+			<p>
+				<strong>(50)</strong> 10. Save your file 'WebPage.pdf' to the ' 
+                <code><span id="Path4"></span></code>
+				' folder.<br />
+
+
+			</p>
+
+			<div class="text-danger">
+				<h2>WebPage.pdf</h2>
+				<hr />
+			</div>
+
+			<p>
+				Create a .pdf file named &#39;screenshots.pdf&#39; by combining the above screenshots.
+			</p>
+
+            <h2>ScreenShots->Snipping Tool + OneNote</h2>
+            <ol>
+                <li>Open <strong>Microsoft OneNote</strong> on your laptop.</li>
+                <li>Create a new page and name it <code>Screenshots</code></li>
+                <li>Save this <code>Screenshots.pdf</code> file into your ' <code><span id="Path20"></span></code>
+                    ' folder.<br />
+                </li>
+                <li>Use the <strong>Snipping Tool</strong> to take each required screenshot </li>
+                <li>After each snip, press <code>Ctrl + V</code> to paste the screenshot into your OneNote page.</li>
+                <li>Label each screenshot clearly (e.g., "Ex10NYT &hyphen; New York Times").</li>
+                <li>Once all images are added, go to <strong>File &gt; Print</strong> and choose <strong>Microsoft Print to PDF</strong>.</li>
+                <li>When all screenshots are done you will upload the PDF file to the appropriate D2L Assignment folder.</li>
+            </ol>
+            <hr>
+
+			<p>
+				<strong>(50)</strong> 11. Save your file 'Screenshots.pdf' to the ' 
+                <code><span id="Path5"></span></code>
+				' folder.<br />
+
+			</p>
+
+			<div class="text-danger">
+				<h2>Screenshots.pdf</h2>
+				<hr />
+			</div>
+
+
+			<p>&nbsp;</p>
+			<p>
+				Use PDFill(Windows) or PDF Preview(Mac) to merge the WebPage.pdf file with the Screenshots.pdf file, and save it as &#39;Summative12.pdf&#39; in ' 
+                <code><span id="Path6"></span></code>
+				' folder.<br />
+
+			</p>
+
+
+			<p>
+				<strong>(50)</strong> 12. Upload your file 'Summative12.pdf' to the D2L 'Summative12' Assignment folder.</p>
+
+			<div class="text-danger">
+				<h2>Summative12.pdf</h2>
+			</div>
+			<hr />
+
+		</div>
+
+
+
+
+		<div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+		<div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+			<p>
+				Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+				Ensure that you have linked this assignment on your home page.
+                Note that your screenshots do not have to be completed to perform this step.<br>
+			</p>
+
+			<strong>(50)</strong> 13. Home Page Hyperlink<br />
+			Check and verify that this assignment is hyperlinked on your home page.<br />
+			<br />
+
+			<strong>(50)</strong> 14. Assignment submission<br />
+			Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page.&nbsp; Correct any errors.
+        <hr />
+
+		</div>
+
+
+
+		<div class="col-lg-12">
+			<br />
+			<input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit"/>
+			<br />
+		</div>
+
+
+	</form>
+
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+
+</body>
+</html>

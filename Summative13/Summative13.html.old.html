@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!--
+        PgP 5/28/2025 update to html and javascript to coincide with best coding practices
+        Formative00 split into 3 separate html files instead of using tabs, too unwieldly
+		PgP 7/17/2020  Final version, with all updates for fall 2020
+		-->
+
+    <!-- With this version going to put the firstname, lastname... on the first page.
+		This will allow student to see assignment with blank fields.  Then when they get to Part 2 and do Exercise 1, put in
+		-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+
+    <!-- model assignment file, version 1 released 2018/02/18 PgP -->
+
+    <title>MIS202 Summative13</title>
+
+</head>
+
+
+<body>
+
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/code/ProcessFormData.asp" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+
+        <!-- had to put assignment here, because it is used in the path calculation -->
+        <!-- <input  name="assignment" id="assignment" value="Formative00" type="hidden" > -->
+
+		<h1 class=" text-center">Research</h1>
+
+<h2 id="student-info" class="sr-only">Student Information</h2>
+<!-- -start-Student, class and assignment information. Assignment hard-coded, other values from constants.js file-start -->
+<div class="row" aria-labelledby="student-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="FirstName" class="text-dark">First Name:</label>
+            <input class="form-control"
+                   name="FirstName"
+                   id="FirstName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="given-name"
+                   aria-label="First Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="LastName" class="text-dark">Last Name:</label>
+            <input class="form-control"
+                   name="LastName"
+                   id="LastName"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="family-name"
+                   aria-label="Last Name"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="StarID" class="text-dark">StarID:</label>
+            <input class="form-control"
+                   name="StarID"
+                   id="StarID"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="username"
+                   aria-label="StarID"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="email" class="text-dark">Email:</label>
+            <input class="form-control"
+                   name="email"
+                   id="email"
+                   type="email"
+                   readonly
+                   aria-readonly="true"
+                   autocomplete="email"
+                   aria-label="Email"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>
+<input name="pin" id="pin" type="hidden" aria-hidden="true" />
+
+<h2 id="course-info" class="sr-only">Course Information</h2>
+<div class="row" aria-labelledby="course-info">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Semester" class="text-dark">Semester:</label>
+            <input class="form-control"
+                   name="Semester"
+                   id="Semester"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Semester"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Class" class="text-dark">Class:</label>
+            <input class="form-control"
+                   name="Class"
+                   id="Class"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Class"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="Section" class="text-dark">Section:</label>
+            <input class="form-control"
+                   name="Section"
+                   id="Section"
+                   type="text"
+                   readonly
+                   aria-readonly="true"
+                   aria-label="Section"
+                   tabindex="0" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="form-group">
+            <label for="assignment" class="text-dark">Assignment:</label>
+            <input class="form-control"
+                   name="assignment"
+                   id="assignment"
+                   type="text"
+                   readonly
+                   value="Summative13"
+                   aria-readonly="true"
+                   aria-label="Assignment"
+                   tabindex="0" />
+        </div>
+    </div>
+</div>	
+		
+		<!-- -end-Student, class and assignment information-end -->
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            1100 Points
+            <hr />
+        </div>
+
+
+        <!-- -start-objectives-start -->
+        <div class="col-lg-12"><a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a></div>
+        <div id="Objectives" class=" collapse in col-lg-12">
+
+
+            <!--Above this line similar except for Assignment number and title   -->
+
+
+            <p>
+                The objective of this assignment is to develop your research skills.
+  <br />
+                Research is not simply reading several resources- it is the purposeful use of 
+  your mental faculties to weigh the available materials and propose a course of 
+  action.
+            </p>
+            <p>Please keep the following excerpt, from &quot;Critical Thinking Why Is It So Hard to Teach?&quot; by Daniel Willingham, in mind during this assignment. </p>
+            <p>How Do Cognitive Scientists Define Critical Thinking?</p>
+            <p>
+                From the cognitive scientist&rsquo;s point of view, the mental activities that are typically called critical thinking are actually a subset of three types of     thinking: reasoning, making judgments     and decisions, and problem     solving. I say that critical thinking is 
+    a subset of these because we think     in these ways all the time, but only     sometimes in a critical way. Deciding 
+    to read this article, for example,     is not critical thinking. But carefully     weighing the evidence it presents 
+    in order to decide whether or not to     believe what it says is.
+                <br />
+                Critical reasoning,     decision making, and problem     solving&mdash;which, for brevity&rsquo;s 
+    sake, I will refer to as critical thinking&mdash;     have three key features: effectiveness, 
+    novelty, and self-direction.     Critical thinking is effective 
+    in that it avoids common pitfalls,     such as seeing only one side of an     issue, discounting new evidence 
+    that disconfirms your ideas, reasoning     from passion rather than     logic, failing to support statements     with evidence, and so on.
+                <br />
+                Critical     thinking is novel in that you don&rsquo;t     simply remember a solution or a 
+    situation that is similar enough to     guide you. For example, solving a 
+    complex but familiar physics problem     by applying a multi-step algorithm     isn&rsquo;t critical thinking because     you are really drawing on memory 
+    to solve the problem. But devising     a new algorithm is critical thinking.     Critical thinking is self-directed in     that the thinker must be calling the     shots: We wouldn&rsquo;t give a student     much credit for critical thinking if     the teacher were prompting each     step he took. 
+    &mdash;D.W.
+            </p>
+            <hr />
+            <p>reference: <a href="https://libguides.winona.edu/MIS202Paulson" class="bg-info text-white" target="_blank">Library Guide</a></p>
+            <hr />
+
+
+        </div>
+
+        <div class="col-lg-12">
+            <p>
+               <strong>(50)</strong> 1. Your major(s):  
+                
+
+      <input type="text" id="q1" name="q1" size="120" maxlength="120" class="form-control" />
+            </p>
+            <p>
+               <strong>(50)</strong> 2. Your anticipated career choice:   
+                
+
+      <input type="text" id="q2" name="q2" size="120" maxlength="120" class="form-control" />
+            </p>
+            <hr />
+            <p>
+                Pick a product or service that is of interest to you. This topic will be the basis of your research for this assignment.
+	<br />
+                You are strongly advised to pick a product or service offered by a public rather than private company.<br />
+                To check if a company is public or private refer to:
+            <br />
+                <a href="https://investing.businessweek.com/research/common/symbollookup/symbollookup.asp?lookuptype=private&amp;region=all" class="bg-info text-white" target="_blank">https://investing.businessweek.com/research/common/symbollookup/symbollookup.asp?lookuptype=private&amp;region=all</a><br />
+                <br />
+                Possible topics include (but are not limited to)
+            </p>
+            <ul>
+                <li>Raspberry Pi</li>
+                <li>Artificial Intelligence</li>
+                <li>Internet of Things devices</li>
+                <li>Nest thermostat</li>
+                <li>Amazon Echo</li>
+                <li>Fitbit, Polar watch</li>
+                <li>iPod/iPad</li>
+                <li>Virtual Reality goggles such as Oculus Rift</li>
+                <li>iPhone or  smartphones</li>
+                <li>SmartTV</li>
+                <li>Drones or UAVs</li>
+                <li>car stereo/entertainment system/navigation systems</li>
+            </ul>
+        </div>
+        <hr />
+
+        <div class=" col-lg-12"><a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1-Company Research</a></div>
+
+        <div id="Exercise01" class="collapse in  col-lg-12">
+
+
+
+            <p>
+                <strong>(50)</strong> 3.  Write your research topic  below:<br />
+
+
+                <input name="q3" type="text" id="q3" size="120" maxlength="120" class="form-control" value="Research topic:" />
+            </p>
+            <hr />
+            <p>
+                <strong>(50)</strong> 4.  Write below the name of the company makes this product or provides this service:<br />
+
+
+                <input type="text" name="q4" id="q4" size="120" maxlength="120" class="form-control" value="company name:  " />
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 5. Provide a description of the company:<br />
+
+
+                <input type="text" name="q5" id="q5" size="120" maxlength="120" class="form-control" value="company description:  " />
+
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 6. What was the company's reported  revenue for the most recent year available?<br />
+
+
+                <input type="text" name="q6" id="q6" size="120" maxlength="120" class="form-control" value="reported revenue, $:  " />
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 7.  What percent (%)  of the company's reported revenue  came from the product or service that you are researching?<br />
+
+
+                <input type="text" name="q7" id="q7" size="120" maxlength="120" class="form-control" value="per cent revenue:  " />
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 8. Find a brief SWOT  (Strengths, Weaknesses, Opportunities, Threats) Analysis of the product or service that you are researching.<br />
+
+
+                <input type="text" name="q8" id="q8" size="120" maxlength="120" class="form-control" value="strength: ; weakness:  ; opportunity:  ; threat:    " />
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 9. List up to three  (3) key competitors of the product or service that you are researching:<br />
+
+
+                <input type="text" name="q9" id="q9" size="120" maxlength="120" class="form-control" value="comp1: ; comp2:  ;  comp3:    " />
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 10. What demographic   is likely to use this product or service?<br />
+                Demographic means age group, gender, social or economic class<br />
+
+
+                <input name="q10" type="text" id="q10" size="120" maxlength="120" class="form-control" value="demographic: " />
+            </p>
+            <p>
+                <strong>(50)</strong> 11.  If you found the above information for this product or service online, please provide the website url.<br />
+                If you used another source, please list the source.<br />
+
+
+                <input name="q11" type="text" id="q11" size="120" maxlength="120" class="form-control" value="website url or information source:" />
+            </p>
+
+            <br />
+
+
+            <p>
+                <strong>(50)</strong> 12. Make a screen shot of an article or graphic from your research that represents the product or service investigated.<br />
+                <!--  PgP 2/4/2018 create path using constants and current document assignment -->
+                Save the screen shot  as &quot;Ex1&quot; in your ' 
+                <code> <span id="Path5"></span></code> 
+                ' folder.<br />
+
+            </p>
+
+
+        </div>
+
+        <div class="col-lg-12 text-danger">
+            <h2>Screenshot Ex1</h2>
+            <hr />
+        </div>
+
+
+        <div class=" col-lg-12"><a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2-Industry Research</a></div>
+
+        <div id="Exercise02" class="collapse in  col-lg-12">
+
+
+            <p>
+               <strong>(50)</strong> 13.  What was the 	size (in dollars, $, or total units sold) of the total available market (TAM) for this	industry in the most recent year available in which your product or service was offered?<br />
+                ref: <a href="https://en.wikipedia.org/wiki/Total_addressable_market" class="bg-info text-white" target="_blank">http://en.wikipedia.org/wiki/Total_addressable_market</a>
+                <br />
+
+
+                <input name="q13" type="text" id="q13" size="120" maxlength="120" class="form-control" value="TAM, $ or units:" />
+            </p>
+            <hr />
+
+            <p>
+                <strong>(50)</strong> 14. What is the   current trend or trends in this industry?<br />
+                Current trends mean was the market growing, shrinking, segmenting, dividing,  moving in another direction...<br />
+
+
+                <input name="q14" type="text" id="q14" size="120" maxlength="120" class="form-control" value="Industry trends:" />
+            </p>
+            <hr />
+            <p>
+                <strong>(50)</strong> 15.  Can you find any   trade associations for this industry? If so, please list one. If not, please state so.<br />
+
+
+                <input name="q15" type="text" id="q15" size="120" maxlength="120" class="form-control" value="Industry trade associations:" />
+            </p>
+
+            <p>
+               <strong>(50)</strong>  16. If you found the above industry information online then please provide the url.	<br />
+                If you used another source, please list the source.<br />
+
+
+                <input name="q16" type="text" id="q16" size="120" maxlength="120" class="form-control" value="Industry trade association url or source:" />
+            </p>
+            <hr />
+            <hr />
+
+            <p>
+               <strong>(50)</strong> 17.  Which   of the following was the most difficult finding information on?
+            </p>
+
+            <p>company revenue</p>
+            <p>% revenue from product or service</p>
+            <p>SWOT</p>
+            <p>competitor information</p>
+            <p>demographic information</p>
+            <p>total available market</p>
+            <p>industry trend</p>
+            <p>trade association</p>
+
+
+            <input name="q17" type="text" id="q17" size="120" maxlength="120" class="form-control" value="most difficult:" />
+            <br />
+
+            <hr />
+        </div>
+
+        <!--  From here to end difference question numbers and Summative numbering for PDF of file uploaded to D2L    -->
+
+        <div class="col-lg-12"><a href="#ExercisePDF" class="btn btn-info" data-toggle="collapse">Exercise-PDF File Creation</a></div>
+
+        <div id="ExercisePDF" class="collapse in  col-lg-12">
+            <p>
+                Use a web browser to verify that you have published your website to https://classes.winona.edu/...
+                <br />
+                Check that your name, StarID, email, class, semester, section and all of your answers are correct and visible.
+                <br />
+                From the menu choose File&gt;Print... and using &quot;Microsoft Print to PDF&quot; save a copy of this assignment as a .pdf file in your   ' 
+                <code> <span id="Path1"></span></code> 
+                ' folder.<br />
+            </p>
+            <br />
+
+            <p>
+               <strong>(50)</strong>18. Save your file 'WebPage.pdf' to the ' 
+                <code>  <span id="Path2"></span></code>
+                ' folder.<br />
+
+
+            </p>
+
+            <div class="text-danger">
+                <h2>WebPage.pdf</h2>
+                <hr />
+            </div>
+
+			<p>
+				Create a .pdf file named &#39;screenshots.pdf&#39; by combining the above screenshots.
+			</p>
+
+            <h2>ScreenShots->Snipping Tool + OneNote</h2>
+            <ol>
+                <li>Open <strong>Microsoft OneNote</strong> on your laptop.</li>
+                <li>Create a new page and name it <code>Screenshots</code></li>
+                <li>Save this <code>Screenshots.pdf</code> file into your ' <code><span id="Path20"></span></code>
+                    ' folder.<br />
+                </li>
+                <li>Use the <strong>Snipping Tool</strong> to take each required screenshot </li>
+                <li>After each snip, press <code>Ctrl + V</code> to paste the screenshot into your OneNote page.</li>
+                <li>Label each screenshot clearly (e.g., "Ex10NYT &hyphen; New York Times").</li>
+                <li>Once all images are added, go to <strong>File &gt; Print</strong> and choose <strong>Microsoft Print to PDF</strong>.</li>
+                <li>When all screenshots are done you will upload the PDF file to the appropriate D2L Assignment folder.</li>
+            </ol>
+            <hr>
+
+
+            <p>
+                <strong>(50)</strong> 19. Save your file 'Screenshots.pdf' to the ' 
+                <code>  <span id="Path3"></span></code>
+                ' folder.<br />
+
+            </p>
+
+            <div class="text-danger">
+                <h2>Screenshots.pdf</h2>
+                <hr />
+            </div>
+
+
+            <p>
+                Use PDFill&nbsp; or PDF Preview(Mac) to merge the WebPage.pdf file with the Screenshots.pdf file, and save it as &#39;Summative13.pdf&#39; in ' 
+                <code>  <span id="Path4"></span></code>
+                ' folder.<br />
+
+            </p>
+
+
+            <p><strong>(50)</strong> 20. Upload your file 'Summative13.pdf' to the D2L 'Summative13' Assignment folder.</p>
+
+            <div class="text-danger">
+                <h2>Summative13.pdf</h2>
+            </div>
+            <hr />
+
+        </div>
+
+
+
+
+        <div class="col-lg-12"><a href="#ExerciseAssignmentSubmission" class="btn btn-info" data-toggle="collapse">Exercise-Assignment Submission</a></div>
+
+        <div id="ExerciseAssignmentSubmission" class="collapse in  col-lg-12">
+            <p>
+                Use a browser to view your completed and published website at: https://classes.winona.edu/...     
+                <br />
+                Ensure that you have linked this assignment on your home page.
+                Note that your screen shots do not have to be completed to perform this step.<br>
+            </p>
+
+            <strong>(50)</strong> 21. Home Page Hyperlink<br />
+            Check and verify that this assignment is hyperlinked on your home page.<br />
+            <br />
+
+            <strong>(50)</strong> 22. Assignment submission<br />
+            Press the Submit button at the top or bottom of this page.
+                Read and follow instructions on the confirmation page. Correct any errors.
+        </div>
+        <hr />
+
+
+
+        <div class="col-lg-12">
+            <br />
+            <input class="text-danger btn-block btn-lg" name="Submit" value="Submit" type="submit">
+            <br />
+        </div>
+
+
+    </form>
+
+
+
+    <!-- PgP 5/31/2025 place js code at end to prevent race conditions -->
+
+    <!-- Creative Commons License Info -->
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <!-- ========== Script Includes (Order is Critical) ========== -->
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+
+</body>
+</html>
